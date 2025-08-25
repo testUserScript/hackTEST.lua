@@ -5,7 +5,7 @@ local guiParent = (gethui and gethui()) or game.CoreGui
 
 local screenGui = Instance.new("ScreenGui")
 screenGui.Name = "screenTest"
-screenGui.Parent = guiParent
+screenGui.Parent = player:WaitForChild("PlayerGui")
 
 local CloseBtn = Instance.new("TextButton")
 CloseBtn.Size = UDim2.new(0, 100, 0, 50)
