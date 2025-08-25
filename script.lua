@@ -4,7 +4,7 @@ local humanoid = char:WaitForChild("Humanoid")
 
 local screenGui = Instance.new("ScreenGui")
 screenGui.Name = "screenTest"
-screenGui.Parent = player.WaitForChild("PlayerGui")
+screenGui.Parent = player:WaitForChild("PlayerGui")
 
 local CloseBtn = Instance.new("TextButton")
 CloseBtn.Size = UDim2.new(0, 100, 0, 50)
@@ -17,6 +17,7 @@ CloseBtn.Parent = screenGui
 CloseBtn:MouseButton1Click:Connect(function()
 	humanoid.WalkSpeed = 80
 end)
+
 
 
 
