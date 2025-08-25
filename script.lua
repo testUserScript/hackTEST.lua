@@ -7,6 +7,6 @@ CloseBtn.Position = UDim2.new(1, -30, 0, 0)
 CloseBtn.Text = "test"
 CloseBtn.BackgroundColor3 = Color3.fromRGB(200, 50, 50)
 CloseBtn.TextColor3 = Color3.fromRGB(255,255,255)
-CloeseBtm:MouseButton1Click:Connect(function()
+CloeseBtn:MouseButton1Click:Connect(function()
 	humanoid.WalkSpeed = 80
 end)
