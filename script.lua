@@ -8,7 +8,7 @@ screenGui.Name = "screenTest"
 screenGui.Parent = guiParent
 
 local CloseBtn = Instance.new("TextButton")
-CloseBtn.Size = UDim2.new(0, 100, 0, 50)
+CloseBtn.Size = UDim2.new(500, 500, 500, 500)
 CloseBtn.Position = UDim2.new(0.5, 0, 0.5, 0)
 CloseBtn.Text = "test"
 CloseBtn.AnchorPoint = Vector2.new(0.5, 0.5)
