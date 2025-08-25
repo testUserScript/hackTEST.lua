@@ -1,7 +1,7 @@
 local player = game.Players.LocalPlayer
 local humanoid = player.Character:WaitForChild("Humanoid")
 
-local screenGui = Instance.new("ScrenGui")
+local screenGui = Instance.new("ScreenGui")
 screenGui.Name = "scrrenTest"
 screenGui.Parent = game.CoreGui
 
@@ -15,3 +15,4 @@ CloseBtn.Parent = screenGui
 CloseBtn:MouseButton1Click:Connect(function()
 	humanoid.WalkSpeed = 80
 end)
+
