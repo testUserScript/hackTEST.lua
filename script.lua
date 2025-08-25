@@ -1,12 +1,17 @@
 local player = game.Players.LocalPlayer
 local humanoid = player.Character:WaitForChild("Humanoid")
 
+local screenGui = Instance.new("ScrenGui")
+screenGui.Name = "scrrenTest"
+screenGui.Parent = game.CoreGui
+
 local CloseBtn = Instance.new("TextButton")
 CloseBtn.Size = UDim2.new(0, 30, 0, 30)
 CloseBtn.Position = UDim2.new(1, -30, 0, 0)
 CloseBtn.Text = "test"
 CloseBtn.BackgroundColor3 = Color3.fromRGB(200, 50, 50)
 CloseBtn.TextColor3 = Color3.fromRGB(255,255,255)
-CloeseBtn:MouseButton1Click:Connect(function()
+CloseBtn.Parent = screenGui
+CloseBtn:MouseButton1Click:Connect(function()
 	humanoid.WalkSpeed = 80
 end)
