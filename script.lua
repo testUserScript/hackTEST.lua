@@ -1,10 +1,11 @@
 local player = game.Players.LocalPlayer
 local char = player.Character or player.CharacterAdded:Wait()
 local humanoid = char:WaitForChild("Humanoid")
+local guiParent = (gethui and gethui()) or game.CoreGui
 
 local screenGui = Instance.new("ScreenGui")
 screenGui.Name = "screenTest"
-screenGui.Parent = player:WaitForChild("PlayerGui")
+screenGui.Parent = guiParent
 
 local CloseBtn = Instance.new("TextButton")
 CloseBtn.Size = UDim2.new(0, 100, 0, 50)
