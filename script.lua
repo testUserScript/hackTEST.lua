@@ -29,7 +29,7 @@ CloseBtn.MouseButton1Click:Connect(function()
   applySpeed(player.Character)
     if click then
 click = false
-    elseif
+    else
 click = true
     end
   end)
