@@ -29,6 +29,8 @@ CloseBtn.MouseButton1Click:Connect(function()
   applySpeed(player.Character)
   end)
 
-if speed then 
-player.CharacterAdded:Connect(applySpeed(player.Character))
-end
+player.CharacterAdded:Connect(function(char)
+  if speed then
+    applySpeed(char)
+    end
+  end)
