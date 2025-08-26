@@ -3,7 +3,7 @@ local char = player.Character
 local humanoid = char:WaitForChild("Humanoid")
 
 
-local guiParent = (gethui and gethui()) or player:WaitForChild("PlayerGui")
+local guiParent = player:WaitForChild("PlayerGui")
 local screenGui = Instance.new("ScreenGui")
 screenGui.Name = "screenTest"
 screenGui.Parent = guiParent
