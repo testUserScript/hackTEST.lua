@@ -1,5 +1,5 @@
 local player = game.Players.LocalPlayer
-local char = player.Character or player.CharacterAdded:Wait()
+local char = player.Character
 local humanoid = char:WaitForChild("Humanoid")
 
 
