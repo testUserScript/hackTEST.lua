@@ -22,10 +22,13 @@ CloseBtn.Parent = screenGui
 local function applySpeed(char)
 local humanoid = char:WaitForChild("Humanoid")
 humanoid.WalkSpeed = 80
+speed = true
 end
 
-CloseBtn.MouseButton1Click:Connect(applySpeed(player.Character))
+CloseBtn.MouseButton1Click:Connect(function()
+  applySpeed(player.Character)
+  end)
 
-if speed == true then 
+if speed then 
 player.CharacterAdded:Connect(applySpeed(player.Character))
 end
