@@ -25,8 +25,8 @@ local function applySpeed(char)
 humanoid.WalkSpeed = 80
 end
 
-CloseBtn.MouseButton1Click:Connect(function()
-  applySpeed(player.Character)
+CloseBtn.MouseButton1Click:Connect(function(char)
+  applySpeed(char)
     if click then
 click = false
     else
