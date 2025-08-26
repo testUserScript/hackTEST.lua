@@ -23,15 +23,16 @@ CloseBtn.Parent = screenGui
 
 local function applySpeed(char)
 humanoid.WalkSpeed = 80
+humanoid.JumpPower = 100
 end
 
 CloseBtn.MouseButton1Click:Connect(function(char)
-  applySpeed(char)
     if click then
 click = false
     else
 click = true
     end
+    applySpeed(char)
   end)
 
 player.CharacterAdded:Connect(function(char)
