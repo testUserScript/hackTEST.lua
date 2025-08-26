@@ -4,6 +4,7 @@ local player = game.Players.LocalPlayer
 local guiParent = player:WaitForChild("PlayerGui")
 local screenGui = Instance.new("ScreenGui")
 screenGui.Name = "screenTest"
+screenGui.ResetOnSpawn = false
 screenGui.Parent = guiParent
 
 
