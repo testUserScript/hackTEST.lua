@@ -1,6 +1,5 @@
 local player = game.Players.LocalPlayer
-local char = player.Character
-local humanoid = char:WaitForChild("Humanoid")
+
 local speed = false
 
 local guiParent = player:WaitForChild("PlayerGui")
@@ -20,13 +19,14 @@ CloseBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
 CloseBtn.Draggable = true
 CloseBtn.Parent = screenGui
 
-local function applySpeed()
+local function applySpeed(char)
+local humanoid = char:WaitForChild("Humanoid")
 humanoid.WalkSpeed = 80
 speed = true
 end
 
-CloseBtn.MouseButton1Click:Connect(applySpeed())
+CloseBtn.MouseButton1Click:Connect(applySpeed(player.Character))
 
 if speed == true then 
-player.CharacterAdded:Connect(applySpeed)
+player.CharacterAdded:Connect(applySpeed(player.Character))
 end
