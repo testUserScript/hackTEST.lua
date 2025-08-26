@@ -1,5 +1,5 @@
 local player = game.Players.LocalPlayer
-
+local speed = false
 
 local guiParent = player:WaitForChild("PlayerGui")
 local screenGui = Instance.new("ScreenGui")
@@ -18,8 +18,15 @@ CloseBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
 CloseBtn.Draggable = true
 CloseBtn.Parent = screenGui
 
-CloseBtn.MouseButton1Click:Connect(function()
-    local char = player.Character
-    local humanoid = char:WaitForChild("Humanoid")
-    humanoid.WalkSpeed = 80
-end)
+local function applySpeed()
+local char = player.Character
+local humanoid = char:WaitForChild("Humanoid")
+humanoid.WalkSpeed = 80
+speed = true
+end
+
+if speed then
+player.CharacterAdded:Connect(applySpeed)
+end
+
+CloseBtn.MouseButton1Click:Connect(applySpeed())
