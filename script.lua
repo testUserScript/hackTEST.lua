@@ -1,4 +1,6 @@
 local player = game.Players.LocalPlayer
+local char = player.Character
+local humanoid = char:WaitForChild("Humanoid")
 local speed = false
 
 local guiParent = player:WaitForChild("PlayerGui")
@@ -19,8 +21,6 @@ CloseBtn.Draggable = true
 CloseBtn.Parent = screenGui
 
 local function applySpeed()
-local char = player.Character
-local humanoid = char:WaitForChild("Humanoid")
 humanoid.WalkSpeed = 80
 speed = true
 end
