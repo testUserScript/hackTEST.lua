@@ -25,8 +25,8 @@ humanoid.WalkSpeed = 80
 speed = true
 end
 
-if speed then
+CloseBtn.MouseButton1Click:Connect(applySpeed())
+
+if speed then 
 player.CharacterAdded:Connect(applySpeed)
 end
-
-CloseBtn.MouseButton1Click:Connect(applySpeed())
