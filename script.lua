@@ -22,10 +22,8 @@ CloseBtn.Draggable = true
 CloseBtn.Parent = screenGui
 
 local function applySpeed(char)
-    if click then
 humanoid.WalkSpeed = 80
 humanoid.JumpPower = 100
-    end
 end
 
 CloseBtn.MouseButton1Click:Connect(function(char)
