@@ -21,22 +21,22 @@ CloseBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
 CloseBtn.Draggable = true
 CloseBtn.Parent = screenGui
 
-local function applySpeed(char)
+local function applySpeed()
 humanoid.WalkSpeed = 80
 humanoid.JumpPower = 100
 end
 
-CloseBtn.MouseButton1Click:Connect(function(char)
+CloseBtn.MouseButton1Click:Connect(function()
     if click then
 click = false
     else
 click = true
     end
-    applySpeed(char)
+    applySpeed()
   end)
 
-player.CharacterAdded:Connect(function(char)
+player.CharacterAdded:Connect(function()
   if humanoid.WalkSpeed ~= 80 and click then
-    applySpeed(char)
+    applySpeed()
     end
   end)
