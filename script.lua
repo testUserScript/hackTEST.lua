@@ -23,7 +23,7 @@ CloseBtn.Parent = screenGui
 
 local function applySpeed()
 humanoid.WalkSpeed = 80
-humanoid.JumpPower = 100
+humanoid.JumpPower = 300
 end
 
 CloseBtn.MouseButton1Click:Connect(function()
