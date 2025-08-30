@@ -27,16 +27,11 @@ humanoid.JumpPower = 100
 end
 
 CloseBtn.MouseButton1Click:Connect(function()
-    if click then
-click = false
-    else
-click = true
-    end
     applySpeed()
   end)
 
 player.CharacterAdded:Connect(function()
-  if humanoid.WalkSpeed ~= 80 and click then
+  if humanoid.WalkSpeed ~= 80  then
     applySpeed()
     end
   end)
